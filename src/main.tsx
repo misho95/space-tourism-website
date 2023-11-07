@@ -14,6 +14,30 @@ const router = createBrowserRouter([
       </PageContainer>
     ),
   },
+  {
+    path: "/destination",
+    element: (
+      <PageContainer>
+        <Header />
+      </PageContainer>
+    ),
+  },
+  {
+    path: "/crew",
+    element: (
+      <PageContainer>
+        <Header />
+      </PageContainer>
+    ),
+  },
+  {
+    path: "/technology",
+    element: (
+      <PageContainer>
+        <Header />
+      </PageContainer>
+    ),
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
