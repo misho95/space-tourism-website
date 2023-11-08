@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import PageContainer from "./components/home.page.container";
+import HomePageContainer from "./components/home.page.container";
 import Header from "./components/header";
 import HomePage from "./pages/home.page";
 
@@ -10,34 +10,34 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <PageContainer>
+      <HomePageContainer>
         <Header />
         <HomePage />
-      </PageContainer>
+      </HomePageContainer>
     ),
   },
   {
     path: "/destination",
     element: (
-      <PageContainer>
+      <HomePageContainer>
         <Header />
-      </PageContainer>
+      </HomePageContainer>
     ),
   },
   {
     path: "/crew",
     element: (
-      <PageContainer>
+      <HomePageContainer>
         <Header />
-      </PageContainer>
+      </HomePageContainer>
     ),
   },
   {
     path: "/technology",
     element: (
-      <PageContainer>
+      <HomePageContainer>
         <Header />
-      </PageContainer>
+      </HomePageContainer>
     ),
   },
 ]);

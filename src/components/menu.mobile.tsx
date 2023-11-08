@@ -16,7 +16,7 @@ const MenuMobile = ({ links }: PropsType) => {
   return (
     <animated.div
       style={{ ...animateMenu }}
-      className="fixed right-0 top-0 h-screen w-2/3 bg-white/5 backdrop-blur-2xl flex flex-col gap-7 pt-[100px]"
+      className="fixed right-0 top-0 h-screen w-2/3 bg-white/5 backdrop-blur-2xl flex sm:hidden flex-col gap-7 pt-[100px] z-40"
     >
       {links.map((l: LinksType) => {
         return (

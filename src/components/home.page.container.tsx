@@ -8,7 +8,7 @@ interface PropsType {
   children: ReactNode;
 }
 
-const PageContainer = ({ children }: PropsType) => {
+const HomePageContainer = ({ children }: PropsType) => {
   const [backgroundImage, setBackgroundImage] = useState<string | null>(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -48,11 +48,11 @@ const PageContainer = ({ children }: PropsType) => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
       className="w-full h-screen bg-center bg-no-repeat bg-cover lg:pt-[40px] md:pl-[55px]"
     >
-      <div className="w-full h-full flex flex-col gap-6 items-center">
+      <div className="w-full h-full flex flex-col gap-6 items-center justify-start">
         {children}
       </div>
     </div>
   );
 };
 
-export default PageContainer;
+export default HomePageContainer;
