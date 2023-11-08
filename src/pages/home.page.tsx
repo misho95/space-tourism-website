@@ -7,7 +7,9 @@ const HomePage = () => {
         <h3 className="text-[#D0D6F9] text-[16px] sm:text-[20px] lg:text-[28px]">
           SO, YOU WANT TO TRAVEL TO
         </h3>
-        <h1 className="text-[80px] sm:text-[150px] text-white">SPACE</h1>
+        <h1 className="text-[80px] sm:text-[150px] text-white font-Bellefair">
+          SPACE
+        </h1>
         <p className="text-[#D0D6F9] text-[15px] sm:text-[16px] lg:text-[18px] ">
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit

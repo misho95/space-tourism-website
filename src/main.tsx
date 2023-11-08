@@ -6,6 +6,7 @@ import PageContainer from "./components/page.container";
 import Header from "./components/header/header";
 import HomePage from "./pages/home.page";
 import { bgImages } from "./bgimages";
+import DesPage from "./pages/des.page";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
     element: (
       <PageContainer imgs={bgImages[1]}>
         <Header />
+        <DesPage />
       </PageContainer>
     ),
   },
