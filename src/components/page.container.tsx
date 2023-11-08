@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 
 interface PropsType {
   children: ReactNode;
-  imgs: bgImagesType | undefined;
+  imgs: bgImagesType;
 }
 
 const PageContainer = ({ children, imgs }: PropsType) => {

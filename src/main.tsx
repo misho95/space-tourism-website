@@ -11,11 +11,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <PageContainer
-        imgs={bgImages.find((m) => {
-          if (m.name === "home") return m;
-        })}
-      >
+      <PageContainer imgs={bgImages[0]}>
         <Header />
         <HomePage />
       </PageContainer>
@@ -24,11 +20,7 @@ const router = createBrowserRouter([
   {
     path: "/destination",
     element: (
-      <PageContainer
-        imgs={bgImages.find((m) => {
-          if (m.name === "destination") return m;
-        })}
-      >
+      <PageContainer imgs={bgImages[1]}>
         <Header />
       </PageContainer>
     ),
@@ -36,11 +28,7 @@ const router = createBrowserRouter([
   {
     path: "/crew",
     element: (
-      <PageContainer
-        imgs={bgImages.find((m) => {
-          if (m.name === "crew") return m;
-        })}
-      >
+      <PageContainer imgs={bgImages[2]}>
         <Header />
       </PageContainer>
     ),
@@ -48,11 +36,7 @@ const router = createBrowserRouter([
   {
     path: "/technology",
     element: (
-      <PageContainer
-        imgs={bgImages.find((m) => {
-          if (m.name === "technology") return m;
-        })}
-      >
+      <PageContainer imgs={bgImages[3]}>
         <Header />
       </PageContainer>
     ),

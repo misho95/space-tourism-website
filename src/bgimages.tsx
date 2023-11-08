@@ -12,7 +12,6 @@ import bgTabletTech from "./assets/technology/background-technology-tablet.jpg";
 import bgMobileTech from "./assets/technology/background-technology-mobile.jpg";
 
 export interface bgImagesType {
-  name: string;
   bgDesktop: string;
   bgTablet: string;
   bgMobile: string;
@@ -20,25 +19,21 @@ export interface bgImagesType {
 
 export const bgImages = [
   {
-    name: "home",
     bgDesktop: bgDesktopHome,
     bgTablet: bgTabletHome,
     bgMobile: bgMobileHome,
   },
   {
-    name: "destination",
     bgDesktop: bgDesktopDes,
     bgTablet: bgTabletDes,
     bgMobile: bgMobileDes,
   },
   {
-    name: "crew",
     bgDesktop: bgDesktopCrew,
     bgTablet: bgTabletCrew,
     bgMobile: bgMobileCrew,
   },
   {
-    name: "technology",
     bgDesktop: bgDesktopTech,
     bgTablet: bgTabletTech,
     bgMobile: bgMobileTech,
