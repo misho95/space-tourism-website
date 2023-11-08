@@ -1,23 +1,9 @@
-import { useSpring, animated } from "@react-spring/web";
+import ContentPageContainer from "../components/content.page.containter";
 
 const HomePage = () => {
-  const animateContent = useSpring({
-    delay: 300,
-    from: { opacity: 0 },
-    to: { opacity: 1 },
-    config: {
-      mass: 5,
-      friction: 120,
-      tension: 120,
-    },
-  });
-
   return (
-    <animated.div
-      style={{ ...animateContent }}
-      className="flex flex-col lg:flex-row w-10/12 h-full items-center justify-around lg:justify-between lg:items-end pb-[130px] "
-    >
-      <div className="w-full lg:w-min select-none flex flex-col text-center">
+    <ContentPageContainer>
+      <div className="w-1/2 lg:w-min select-none flex justify-center items-center flex-col text-center">
         <h3 className="text-[#D0D6F9] text-[16px] sm:text-[20px] lg:text-[28px]">
           SO, YOU WANT TO TRAVEL TO
         </h3>
@@ -29,10 +15,12 @@ const HomePage = () => {
           experience!
         </p>
       </div>
-      <button className="text-[20px] sm:text-[32px] bg-white rounded-full w-[150px] h-[150px] sm:w-[242px] sm:h-[242px] lg:w-[274px] lg:h-[274px]">
-        EXPLORE
-      </button>
-    </animated.div>
+      <div className="w-1/2 flex justify-center items-center">
+        <button className="text-[20px] sm:text-[32px] bg-white rounded-full w-[150px] h-[150px] sm:w-[242px] sm:h-[242px] lg:w-[274px] lg:h-[274px]">
+          EXPLORE
+        </button>
+      </div>
+    </ContentPageContainer>
   );
 };
 
