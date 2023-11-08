@@ -1,6 +1,12 @@
 import { useEffect, useState } from "react";
 
-const DesButton = ({ value, active, setActive }) => {
+interface PropsType {
+  value: string;
+  active: string;
+  setActive: (arg: string) => void;
+}
+
+const DesButton = ({ value, active, setActive }: PropsType) => {
   const [title, setTitle] = useState(value);
 
   useEffect(() => {
