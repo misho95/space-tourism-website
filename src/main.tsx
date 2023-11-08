@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import PageContainer from "./components/page.container";
+import PageContainer from "./components/home.page.container";
 import Header from "./components/header";
+import HomePage from "./pages/home.page";
 
 const router = createBrowserRouter([
   {
@@ -11,6 +12,7 @@ const router = createBrowserRouter([
     element: (
       <PageContainer>
         <Header />
+        <HomePage />
       </PageContainer>
     ),
   },
