@@ -1,9 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
-import Logo from "../assets/shared/logo.svg";
+import Logo from "../../assets/shared/logo.svg";
 import NavLink from "./nav.link";
 import { useSpring, animated } from "@react-spring/web";
-import iconHam from "../assets/shared/icon-hamburger.svg";
-import iconClose from "../assets/shared/icon-close.svg";
+import iconHam from "../../assets/shared/icon-hamburger.svg";
+import iconClose from "../../assets/shared/icon-close.svg";
 import { useState } from "react";
 import MenuMobile from "./menu.mobile";
 

@@ -2,42 +2,59 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import HomePageContainer from "./components/home.page.container";
-import Header from "./components/header";
+import PageContainer from "./components/page.container";
+import Header from "./components/header/header";
 import HomePage from "./pages/home.page";
+import { bgImages } from "./bgimages";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <HomePageContainer>
+      <PageContainer
+        imgs={bgImages.find((m) => {
+          if (m.name === "home") return m;
+        })}
+      >
         <Header />
         <HomePage />
-      </HomePageContainer>
+      </PageContainer>
     ),
   },
   {
     path: "/destination",
     element: (
-      <HomePageContainer>
+      <PageContainer
+        imgs={bgImages.find((m) => {
+          if (m.name === "destination") return m;
+        })}
+      >
         <Header />
-      </HomePageContainer>
+      </PageContainer>
     ),
   },
   {
     path: "/crew",
     element: (
-      <HomePageContainer>
+      <PageContainer
+        imgs={bgImages.find((m) => {
+          if (m.name === "crew") return m;
+        })}
+      >
         <Header />
-      </HomePageContainer>
+      </PageContainer>
     ),
   },
   {
     path: "/technology",
     element: (
-      <HomePageContainer>
+      <PageContainer
+        imgs={bgImages.find((m) => {
+          if (m.name === "technology") return m;
+        })}
+      >
         <Header />
-      </HomePageContainer>
+      </PageContainer>
     ),
   },
 ]);

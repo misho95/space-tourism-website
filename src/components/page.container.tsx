@@ -1,16 +1,17 @@
-import bgDesktop from "../assets/home/background-home-desktop.jpg";
-import bgTablet from "../assets/home/background-home-tablet.jpg";
-import bgMobile from "../assets/home/background-home-mobile.jpg";
 import { ReactNode } from "react";
 import { useEffect, useState } from "react";
+import { bgImagesType } from "../bgimages";
+import { useLocation } from "react-router-dom";
 
 interface PropsType {
   children: ReactNode;
+  imgs: bgImagesType | undefined;
 }
 
-const HomePageContainer = ({ children }: PropsType) => {
+const PageContainer = ({ children, imgs }: PropsType) => {
   const [backgroundImage, setBackgroundImage] = useState<string | null>(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const location = useLocation();
 
   useEffect(() => {
     // Function to update the window width
@@ -31,17 +32,17 @@ const HomePageContainer = ({ children }: PropsType) => {
     const width = windowWidth;
 
     if (width >= 1024) {
-      return bgDesktop;
+      return imgs.bgDesktop;
     } else if (width >= 768) {
-      return bgTablet;
+      return imgs.bgTablet;
     } else {
-      return bgMobile;
+      return imgs.bgMobile;
     }
   };
 
   useEffect(() => {
     setBackgroundImage(chooseBackgroundImage());
-  }, [windowWidth]);
+  }, [windowWidth, location.pathname]);
 
   return (
     <div
@@ -55,4 +56,4 @@ const HomePageContainer = ({ children }: PropsType) => {
   );
 };
 
-export default HomePageContainer;
+export default PageContainer;
