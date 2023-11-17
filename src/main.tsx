@@ -8,7 +8,6 @@ import HomePage from "./pages/home.page";
 import { bgImages } from "./bgimages";
 import DesPage from "./pages/des.page";
 import CrewPage from "./pages/crew.page";
-import TechContent from "./components/tech/tech.content";
 import TechPage from "./pages/tech.page";
 
 const router = createBrowserRouter([
