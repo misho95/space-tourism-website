@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import PageContainer from "./components/page.container";
+import PageContainer from "./components/shared/page.container";
 import Header from "./components/header/header";
 import HomePage from "./pages/home.page";
 import { bgImages } from "./bgimages";

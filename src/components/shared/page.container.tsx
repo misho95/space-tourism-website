@@ -1,6 +1,6 @@
 import { ReactNode, useRef } from "react";
 import { useEffect, useState } from "react";
-import { bgImagesType } from "../bgimages";
+import { bgImagesType } from "../../bgimages";
 import { useLocation } from "react-router-dom";
 
 interface PropsType {

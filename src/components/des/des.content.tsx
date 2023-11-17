@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import DesButton from "./des.button";
 import { useSpring, animated } from "@react-spring/web";
-import { DataType } from "../pages/des.page";
+import { DataType } from "../../pages/des.page";
 
 interface PropsType {
   data: DataType | undefined;

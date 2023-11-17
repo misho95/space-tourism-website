@@ -1,4 +1,4 @@
-import ContentPageContainer from "../components/content.page.containter";
+import ContentPageContainer from "../components/shared/content.page.containter";
 
 const HomePage = () => {
   return (

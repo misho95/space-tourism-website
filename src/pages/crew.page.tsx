@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import ContentPageContainer from "../components/content.page.containter";
+import ContentPageContainer from "../components/shared/content.page.containter";
 import json from "../data.json";
-import CrewContent from "../components/crew.content";
+import CrewContent from "../components/crew/crew.content";
 
 export interface CrewDataType {
   name: string;

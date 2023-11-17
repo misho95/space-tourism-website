@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSpring, animated } from "@react-spring/web";
-import { CrewDataType } from "../pages/crew.page";
+import { CrewDataType } from "../../pages/crew.page";
 import CrewSlide from "./crew.slide";
 
 interface PropsType {
@@ -73,7 +73,7 @@ const CrewContent = ({ data, active, setActive }: PropsType) => {
           </p>
         </div>
 
-        <div className="hidden sm:flex gap-3 justify-center items-center w-full">
+        <div className="hidden sm:flex gap-3 justify-center items-center lg:justify-start w-full">
           <CrewSlide id={0} active={active} setActive={setActive} />
           <CrewSlide id={1} active={active} setActive={setActive} />
           <CrewSlide id={2} active={active} setActive={setActive} />
