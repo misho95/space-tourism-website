@@ -11,6 +11,8 @@ interface PropsType {
 const PageContainer = ({ children, imgs }: PropsType) => {
   const [backgroundImage, setBackgroundImage] = useState<string | null>(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowHeight, setWindwoHeight] = useState(window.innerHeight);
+  const [wide, setWide] = useState(false);
   const page = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
@@ -18,6 +20,7 @@ const PageContainer = ({ children, imgs }: PropsType) => {
     // Function to update the window width
     function handleResize() {
       setWindowWidth(window.innerWidth);
+      setWindwoHeight(window.innerHeight);
     }
 
     // Add the event listener
@@ -43,13 +46,20 @@ const PageContainer = ({ children, imgs }: PropsType) => {
 
   useEffect(() => {
     setBackgroundImage(chooseBackgroundImage());
-  }, [windowWidth, location.pathname]);
+    if (windowWidth > windowHeight) {
+      setWide(true);
+    } else {
+      setWide(false);
+    }
+  }, [windowWidth, windowHeight, location.pathname]);
 
   return (
     <div
       ref={page}
       style={{ backgroundImage: `url(${backgroundImage})` }}
-      className="w-full h-screen bg-center bg-no-repeat bg-cover lg:pt-[40px] md:pl-[55px]"
+      className={`w-full ${
+        wide ? "min-h-screen" : "h-screen"
+      } bg-center bg-no-repeat bg-cover lg:pt-[40px] md:pl-[55px] pb-20`}
     >
       <div className="w-full h-full flex flex-col gap-6 items-center justify-start">
         {children}
