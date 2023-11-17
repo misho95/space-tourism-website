@@ -11,7 +11,6 @@ interface PropsType {
 const PageContainer = ({ children, imgs }: PropsType) => {
   const [backgroundImage, setBackgroundImage] = useState<string | null>(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [isScrollable, setIsScrollable] = useState<boolean>(false);
   const page = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
