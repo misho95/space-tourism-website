@@ -46,7 +46,7 @@ const PageContainer = ({ children, imgs }: PropsType) => {
 
   useEffect(() => {
     setBackgroundImage(chooseBackgroundImage());
-    if (windowWidth > windowHeight) {
+    if (windowWidth > windowHeight * 2) {
       setWide(true);
     } else {
       setWide(false);
@@ -59,7 +59,7 @@ const PageContainer = ({ children, imgs }: PropsType) => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
       className={`w-full ${
         wide ? "min-h-screen" : "h-screen"
-      } bg-center bg-no-repeat bg-cover lg:pt-[40px] md:pl-[55px] pb-20`}
+      } lg:h-screen bg-center bg-no-repeat bg-cover lg:pt-[40px] md:pl-[55px] pb-20`}
     >
       <div className="w-full h-full flex flex-col gap-6 items-center justify-start">
         {children}
