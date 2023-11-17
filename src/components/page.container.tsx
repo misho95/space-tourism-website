@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 import { useEffect, useState } from "react";
 import { bgImagesType } from "../bgimages";
 import { useLocation } from "react-router-dom";
@@ -11,6 +11,8 @@ interface PropsType {
 const PageContainer = ({ children, imgs }: PropsType) => {
   const [backgroundImage, setBackgroundImage] = useState<string | null>(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isScrollable, setIsScrollable] = useState<boolean>(false);
+  const page = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -46,6 +48,7 @@ const PageContainer = ({ children, imgs }: PropsType) => {
 
   return (
     <div
+      ref={page}
       style={{ backgroundImage: `url(${backgroundImage})` }}
       className="w-full h-screen bg-center bg-no-repeat bg-cover lg:pt-[40px] md:pl-[55px]"
     >

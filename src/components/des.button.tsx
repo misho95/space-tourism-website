@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 
 interface PropsType {
+  id: number;
   value: string;
-  active: string;
-  setActive: (arg: string) => void;
+  active: number;
+  setActive: (arg: number) => void;
 }
 
-const DesButton = ({ value, active, setActive }: PropsType) => {
+const DesButton = ({ id, value, active, setActive }: PropsType) => {
   const [title, setTitle] = useState(value);
 
   useEffect(() => {
@@ -18,9 +19,9 @@ const DesButton = ({ value, active, setActive }: PropsType) => {
 
   return (
     <button
-      onClick={() => setActive(value)}
+      onClick={() => setActive(id)}
       className={`text-white font-barlow ${
-        active === value ? "border-b-2" : null
+        active === id ? "border-b-2" : null
       }  pb-[6px]`}
     >
       {title}
