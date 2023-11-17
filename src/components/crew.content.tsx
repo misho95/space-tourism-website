@@ -41,7 +41,7 @@ const CrewContent = ({ data, active, setActive }: PropsType) => {
     <>
       <animated.div
         style={{ ...animateSlide }}
-        className="flex flex-col lg:gap-[100px] w-11/12 lg:w-1/2 h-full justify-center items-center lg:items-start font-barlow"
+        className="flex flex-col gap-[50px] lg:gap-[100px] w-11/12 lg:w-1/2 lg:h-full justify-center items-center lg:items-start font-barlow"
       >
         <h1 className="text-white font-barlow text-[16px] sm:text-[20px] lg:text-[28px] flex gap-3 select-none w-full">
           <span className="text-white/50">02</span>
@@ -49,7 +49,7 @@ const CrewContent = ({ data, active, setActive }: PropsType) => {
         </h1>
         <animated.div
           style={{ ...animateSlide }}
-          className="w-11/12 lg:w-1/2 h-full flex flex-col justify-center items-center sm:hidden"
+          className="w-11/12 lg:w-1/2 lg:h-full flex flex-col justify-center items-center sm:hidden"
         >
           <img src={data?.images.png} className="w-fit h-fit" />
           <div className="w-full h-[1px] bg-white/20 mb-5"></div>
@@ -61,11 +61,11 @@ const CrewContent = ({ data, active, setActive }: PropsType) => {
           </div>
         </animated.div>
 
-        <div className="w-min text-center lg:text-left">
-          <h2 className="text-white/50 text-[16px] sm:text-[24px] lg:text-[32px] font-Bellefair w-[400px]">
+        <div className="flex  flex-col gap-2 w-full lg:w-min text-center lg:text-left">
+          <h2 className="text-white/50 text-[16px] sm:text-[24px] lg:text-[32px] font-Bellefair">
             {data?.role}
           </h2>
-          <h1 className="text-white text-[24px] sm:text-[40px] lg:text-[56px] font-Bellefair">
+          <h1 className="text-white text-[24px] sm:text-[40px] lg:text-[56px] font-Bellefair w-full lg:w-[500px]">
             {data?.name}
           </h1>
           <p className="text-[#D0D6F9] text-[15px] sm:text-[16px] lg:text-[18px] ">
@@ -82,7 +82,7 @@ const CrewContent = ({ data, active, setActive }: PropsType) => {
       </animated.div>
       <animated.div
         style={{ ...animateSlide }}
-        className="w-11/12 lg:w-1/2 h-full hidden justify-center items-center sm:flex"
+        className="w-11/12 lg:w-1/2 lg:h-full hidden justify-center items-center sm:flex"
       >
         <img src={data?.images.png} className="w-fit h-full" />
       </animated.div>
