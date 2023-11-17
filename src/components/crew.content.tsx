@@ -82,9 +82,9 @@ const CrewContent = ({ data, active, setActive }: PropsType) => {
       </animated.div>
       <animated.div
         style={{ ...animateSlide }}
-        className="w-11/12 lg:w-1/2 lg:h-full hidden justify-center items-center sm:flex"
+        className="w-11/12 lg:w-1/2 lg:h-full hidden justify-center items-end sm:flex"
       >
-        <img src={data?.images.png} className="w-fit h-full" />
+        <img src={data?.images.png} className="w-fit h-fit" />
       </animated.div>
     </>
   );

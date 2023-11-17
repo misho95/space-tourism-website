@@ -59,7 +59,7 @@ const PageContainer = ({ children, imgs }: PropsType) => {
       style={{ backgroundImage: `url(${backgroundImage})` }}
       className={`w-full ${
         wide ? "min-h-screen" : "h-screen"
-      } lg:h-screen bg-center bg-no-repeat bg-cover lg:pt-[40px] md:pl-[55px] pb-20`}
+      } lg:h-screen bg-center bg-no-repeat bg-cover lg:pt-[40px] md:pl-[55px] lg:pb-0`}
     >
       <div className="w-full h-full flex flex-col gap-6 items-center justify-start">
         {children}
