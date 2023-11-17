@@ -92,7 +92,7 @@ const DesContent = ({ data, active, setActive }: PropsType) => {
             {data?.description}
           </p>
           <div className="w-full h-[1px] bg-white/20 my-10"></div>
-          <div className="flex justify-between gap-3">
+          <div className="flex justify-between gap-3 pb-10 lg:pb-0">
             <span>
               <h3 className="text-[#D0D6F9] text-[14px]">AVG. DISTANCE</h3>
               <h2 className="text-white text-[28px]">{data?.distance}</h2>
