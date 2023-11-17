@@ -49,7 +49,7 @@ const DesContent = ({ data, active, setActive }: PropsType) => {
         </h1>
         <div className="w-full flex justify-center items-center lg:block">
           <img
-            src={`../${data?.images.png}`}
+            src={`./${data?.images.png}`}
             className="w-[170px] h-[170px] sm:w-[300px] sm:h-[300px] lg:w-[445px] lg:h-[445px]"
           />
         </div>
