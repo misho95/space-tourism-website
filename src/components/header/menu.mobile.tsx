@@ -4,9 +4,10 @@ import { useSpring, animated } from "@react-spring/web";
 
 interface PropsType {
   links: LinksType[];
+  setShowMenu: (arg: boolean) => void;
 }
 
-const MenuMobile = ({ links }: PropsType) => {
+const MenuMobile = ({ links, setShowMenu }: PropsType) => {
   const animateMenu = useSpring({
     delay: 100,
     from: { x: 400 },
@@ -20,7 +21,13 @@ const MenuMobile = ({ links }: PropsType) => {
     >
       {links.map((l: LinksType) => {
         return (
-          <MenuLinksMobile key={l.id} id={l.id} title={l.title} url={l.url} />
+          <MenuLinksMobile
+            key={l.id}
+            id={l.id}
+            title={l.title}
+            url={l.url}
+            setShowMenu={setShowMenu}
+          />
         );
       })}
     </animated.div>

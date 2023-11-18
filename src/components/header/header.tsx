@@ -83,7 +83,7 @@ const Header = () => {
           className="absolute top-0 left-0 z-50 w-full h-full"
         />
       </button>
-      {showMenu && <MenuMobile links={links} />}
+      {showMenu && <MenuMobile links={links} setShowMenu={setShowMenu} />}
     </animated.div>
   );
 };
