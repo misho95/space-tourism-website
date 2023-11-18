@@ -9,7 +9,7 @@ interface PropsType {
 }
 
 const PageContainer = ({ children, imgs }: PropsType) => {
-  const [backgroundImage, setBackgroundImage] = useState<string | null>(null);
+  const [backgroundImage, setBackgroundImage] = useState<string | string>("");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [windowHeight, setWindwoHeight] = useState(window.innerHeight);
   const [wide, setWide] = useState(false);
